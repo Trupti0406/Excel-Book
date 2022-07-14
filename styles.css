@@ -12,11 +12,42 @@ body {
   border: 1px solid gray;
   height: 3rem;
   background-color: lightblue;
+  display: flex;
+  align-items: center;
+}
+.menu_bar > *{
+    height: 75%;
 }
 
+.font_family{
+    width: 20%;
+    border: none;
+    border-right: 1px solid gray;
+    /* margin-right: 0.2rem; */
+}
 
+.font_size{
+    width: 10%;
+    border: none;
+    border-right: 1px solid gray;
+}
+.bui_container{
+    border-right: 1px solid gray;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
 
+.alignment_container{
+    border-right: 1px solid gray;
+    width: 20%;
+     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
+}
 
 
 
