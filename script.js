@@ -1,34 +1,18 @@
-const topRow = document.querySelector(".top_row");
-const leftCol = document.querySelector(".left_col");
-let grid = document.querySelector(".grid");
-
-// Left Colum cells 1 to 100
-for (let i = 1; i <= 100; i++) {
-  //create a cell
-  let div = document.createElement("div");
-  div.setAttribute("class", "cell");
-  div.textContent = i;
-  leftCol.appendChild(div);
-}
-
-// Top row cell A to z
-for (let i = 1; i <= 26; i++) {
-  //create a cell
-  let div = document.createElement("div");
-  div.setAttribute("class", "cell");
-  div.textContent = String.fromCharCode(i + 64);
-  topRow.appendChild(div);
-}
-
-// Creating grid
-for (let cols = 1; cols <= 100; cols++) {
-  let row = document.createElement("div");
-  row.setAttribute("class", "row");
-  for (let rows = 1; rows <= 26; rows++) {
-    let col = document.createElement("div");
-    col.setAttribute("class", "cell");
-    col.textContent = `${String.fromCharCode(64 + rows)} - ${cols}`;
-    row.appendChild(col);
-  }
-  grid.appendChild(row);
+// Adress bar Implementation
+let cells = document.querySelectorAll(".grid .cell");
+let addressBar = document.querySelector(".address_bar");
+// 1) Eventlistener on all cells => onlick
+for (let i = 0; i < cells.length; i++) {
+  // 2) When a cell is clicked => Element mil jaye
+  cells[i].addEventListener("click", function (e) {
+    let currentCell = e.currentTarget;
+    console.log(currentCell);
+    // 3) get rid, cid => address mein convert
+    let rid = Number(currentCell.getAttribute("row_id"));
+    let cid = Number(currentCell.getAttribute("column_id"));
+    let address = String.fromCharCode(cid + 64) + rid;
+    // console.log(address);
+    // 4) put it in address bar
+    addressBar.value = address;
+  });
 }

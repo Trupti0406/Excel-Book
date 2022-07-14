@@ -1,3 +1,4 @@
+/* ================Global CSS======================== */
 * {
   box-sizing: border-box;
 }
@@ -6,21 +7,56 @@ body {
   margin: 0;
 }
 
+/* ================Menu Container=============== */
 .menu_bar {
   border: 1px solid gray;
-
   height: 3rem;
   background-color: lightblue;
 }
 
+
+
+
+
+
+
+
+/* ===================Formula Container=========== */
 .formula_container {
   border: 1px solid gray;
-
   height: 2rem;
-  background-color: lightgreen;
+  /* background-color: rgb(235, 224, 220); */
+  display: flex;
+  align-items: center;
+}
+
+.formula_img{
+    height: 1.2rem;
+}
+
+.address_bar{
+    /* height: 1rem; */
+    width: 20%;
+    text-align:center;
+    border: none;
+    border-right: 1px solid gray;
+    margin-right: 1.5rem;
+    outline: none;
+
+}
+
+.formula_bar{
+    width: 70%;
+    border: none;
+    border-left: 1px solid gray;
+    margin-left: 1.5rem;
+    outline: none;
 }
 
 
+
+
+/* ====================Grid Conatiner================ */
 /* grid will have remaining height */
 .grid_container {
   border: 1px solid gray;
@@ -34,13 +70,14 @@ body {
   border: 1px solid gray;
   height: 1.5rem;
   width: 5rem;
-  background-color: lightpink;
+  /* #ACCEF7 */
 }
 
 .left_col > * {
   width: 2rem;
   text-align: center;
   padding-top: 0.2rem;
+  background-color: lightgray;
 }
 
 .top_row {
@@ -48,6 +85,8 @@ body {
   position: absolute;
   top: 0;
   left: 2rem;
+  background-color: lightgray;
+
 }
 
 .left_col {
@@ -77,9 +116,9 @@ body {
   display: flex;
 }
 
-/* Grid Styling Ends */
 
-/* Sheets */
+
+/* =========================Sheets Contaainer============ */
 .sheets_container {
   height: 2rem;
   /* background-color: lightgray; */
@@ -87,19 +126,19 @@ body {
   display: flex;
 }
 
-.add_sheet{
-    height: 2rem;
-    width: 2rem;
-    border: 2px solid gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.add_sheet {
+  height: 2rem;
+  width: 2rem;
+  border: 2px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.sheet{
- height: 2rem;
-    width: 4rem;
-    background-color: lightgray;
-    border: 2px solid gray;
-    text-align: center;
-    padding-top: 0.2rem;
+.sheet {
+  height: 2rem;
+  width: 4rem;
+  background-color: lightgray;
+  border: 2px solid gray;
+  text-align: center;
+  padding-top: 0.2rem;
 }
