@@ -11,27 +11,30 @@ body {
 .menu_bar {
   border: 1px solid gray;
   height: 3rem;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   display: flex;
   align-items: center;
 }
 .menu_bar > *{
     height: 75%;
+    
 }
 
 .font_family{
     width: 20%;
     border: none;
     border-right: 1px solid gray;
-    /* margin-right: 0.2rem; */
+    text-align: center;
+    cursor: pointer;
 }
 
 .font_size{
     width: 10%;
     border: none;
     border-right: 1px solid gray;
+    cursor: pointer;
 }
-.bui_container{
+.bui_container, .alignment_container{
     border-right: 1px solid gray;
     width: 20%;
     display: flex;
@@ -40,13 +43,8 @@ body {
     
 }
 
-.alignment_container{
-    border-right: 1px solid gray;
-    width: 20%;
-     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
+.bui_container >*, .alignment_container > *{
+    cursor: pointer;
 }
 
 
