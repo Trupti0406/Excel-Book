@@ -1,42 +1,64 @@
-// Creating a grid
-function init() {
-  // Left Colum cells 1 to 100
+// create grid
+function initUI() {
+  let topRow = document.querySelector(".top_row");
+  // left column ke cells
   let leftCol = document.querySelector(".left_col");
+  let grid = document.querySelector(".grid");
   for (let i = 1; i <= 100; i++) {
-    //create a cell
+    // create a cell
     let div = document.createElement("div");
     div.setAttribute("class", "cell");
     div.textContent = i;
     leftCol.appendChild(div);
   }
-
-  // Top row cell A to z
-  let topRow = document.querySelector(".top_row");
+  // top row ke cells
   for (let i = 1; i <= 26; i++) {
-    //create a cell
+    // create a cell
     let div = document.createElement("div");
     div.setAttribute("class", "cell");
     div.textContent = String.fromCharCode(i + 64);
     topRow.appendChild(div);
   }
-
-  // Creating grid
-  let grid = document.querySelector(".grid");
-  for (let rows = 1; rows <= 100; rows++) {
+  // grid
+  for (let i = 0; i < 100; i++) {
     let row = document.createElement("div");
     row.setAttribute("class", "row");
-    for (let cols = 1; cols <= 26; cols++) {
+    for (let j = 0; j < 26; j++) {
       let col = document.createElement("div");
       col.setAttribute("class", "cell");
-      // col.textContent = `${String.fromCharCode(64 + cols)} - ${rows}`;
+      // col.textContent = `${i}-${j}`
       col.setAttribute("contenteditable", "true");
-      // Set two attributes of our own to identify each cell without showing any change on UI
-      col.setAttribute("column_id", cols);
-      col.setAttribute("row_id", rows);
-
+      // we have set these 2 atttributes to identify each cell
+      // without showing any change on ui
+      col.setAttribute("rid", i);
+      col.setAttribute("cid", j);
       row.appendChild(col);
     }
     grid.appendChild(row);
   }
 }
-init();
+// 1. creation 2d db -> to represent every
+// cell in the excel grid
+let db = [];
+function initDb() {
+  for (let i = 0; i < 100; i++) {
+    let rowArr = [];
+    for (let j = 0; j < 26; j++) {
+      let cellObj = {
+        fontFamily: "Courier New",
+        fontSize: "16",
+        isBold: false,
+        isItalic: false,
+        isUnderline: false,
+        cAlignment: "justify",
+        formula: "",
+        value: "",
+      };
+      rowArr.push(cellObj);
+    }
+    db.push(rowArr);
+  }
+}
+initUI();
+initDb();
+// console.log(db);f
