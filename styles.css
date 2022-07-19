@@ -43,6 +43,7 @@ body {
 
 i {
     color: rgb(121, 114, 114);
+    cursor: pointer;
 }
 
 .selected {

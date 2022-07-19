@@ -2,8 +2,8 @@
 let fontSizeSelector = document.querySelector(".select_f_size");
 let fontFamilySelector = document.querySelector(".select_f_family");
 let boldButton = document.querySelector(".fa-bold");
-let italicButton = document.querySelector(".fa-italic");
 let underlineButton = document.querySelector(".fa-underline");
+let italicButton = document.querySelector(".fa-italic");
 let addressBar = document.querySelector(".address_bar");
 let alignmentBtns = document.querySelectorAll(".alignment_container i");
 
@@ -34,7 +34,7 @@ fontFamilySelector.addEventListener("change", function () {
   dbCellObj.fontFamily = fontFamily;
 });
 
-//  bold -> toggle wala logic
+//  bold -> toggle wala logic ============================================
 // make a text bold in  dom -> (fontWeight)bold /normal
 boldButton.addEventListener("click", function () {
   // get the change
@@ -58,7 +58,7 @@ boldButton.addEventListener("click", function () {
   }
 });
 
-// make a text italic in  dom -> (fontStyle) italic/normal
+// make a text italic in  dom -> (fontStyle) italic/normal ======================================
 italicButton.addEventListener("click", function () {
   // get the change
   let isSelected = italicButton.classList[2];
@@ -77,7 +77,7 @@ italicButton.addEventListener("click", function () {
     dbCellObj.isItalic = true;
   }
 });
-// make a text underline in  dom -> (textDecoration) underline/none
+// make a text underline in  dom -> (textDecoration) underline/none ===================================
 underlineButton.addEventListener("click", function () {
   // get the change
   let isSelected = underlineButton.classList[2];
@@ -97,7 +97,10 @@ underlineButton.addEventListener("click", function () {
   }
 });
 
-// alignment ka code
+
+
+
+// ==========================  alignment ka code // ========================== 
 for (let i = 0; i < alignmentBtns.length; i++) {
   alignmentBtns[i].addEventListener("click", function () {
     // step1
